@@ -48,28 +48,28 @@
                    </button>
                 </div>
                 <div class="modal-body">
-                    form>
-                    <div class="form-row">
-                        <div class="form-group col-sm-4">
-                            <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                            <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
-                        </div>
-                        <div class="form-group col-sm-4">
-                            <label class="sr-only" for="exampleInputPassword3">Password</label>
-                            <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
-                        </div>
-                        <div class="col-sm-auto">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox">
-                                <label class="form-check-label"> Remember me
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label"> Remember me
                                     </label>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="form-row">
-                        <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
-                        <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
-                    </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -85,9 +85,10 @@
                 </div>
                 <div class="col-12 col-sm align-self-center">
                     <img src="img/logo.png" class="img-fluid">
-
-                    <a class="btn btn-block nav-link btn-warning" data-toggle="tooltip" data-html="true" title="Or call us at  <br><strong>+85212345678</strong>" data-placement="bottom" href="#formReserve">Reserve a Table</a>
-
+                    <span class="navbar-text">
+                        <a class=" btn btn-block nav-link btn-warning"  data-toggle="modal" data-target="#reserveModal" data-html="true">
+                            <span class="fa fa-food"></span>Reserve Table
+                    </a>
                 </div>
             </div>
         </div>
@@ -184,48 +185,60 @@
                 </div>
             </div>
 
-            <div class="row justify-content-center">
-                <div class="card" style="width: 28rem;" id="formReserve">
-
-                    <div class="card-body">
-                        <h5 class="card-title bg-warning text-white">Reserve a Table</h5>
-                        <div class="">Number of Guest</div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                            <label class="form-check-label" for="inlineRadio1">1</label>
+            <div id="reserveModal" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-lg" role="content">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Reserve a Table</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                            <label class="form-check-label" for="inlineRadio2">2</label>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Number of Guest</label>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                        <label class="form-check-label" for="inlineRadio1">1</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                        <label class="form-check-label" for="inlineRadio2">2</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option3">
+                                        <label class="form-check-label" for="inlineRadio1">3</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option4">
+                                        <label class="form-check-label" for="inlineRadio2">4</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option5">
+                                        <label class="form-check-label" for="inlineRadio1">5</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option6">
+                                        <label class="form-check-label" for="inlineRadio2">6</label>
+                                    </div>
+                                </div>
+                                <div class="mb-3 form-submit">
+                                    <label class="form-submit-label" for="submit">Section</label>
+                                    <button type="submit" class="btn btn-success">Non Smoking</button>
+                                    <button type="submit" class="btn btn-danger">Smoking</button>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <label class="form-label" for="date">Date and Time</label>
+                                    <div class="col-sm-3">
+                                        <input type="date" class="form-control" id="inputDate" placeholder="Date">
+                                        <input type="time" class="form-control" id="inputTime" placeholder="Time">
+                                    </div>
+                                </div>
+                                <div class="mb-3 form-submit">
+                                    <button type="submit" class="btn btn-secondary">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">Reserve</button>
+                                </div>
+                            </form>
                         </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option3">
-                            <label class="form-check-label" for="inlineRadio1">3</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option4">
-                            <label class="form-check-label" for="inlineRadio2">4</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option5">
-                            <label class="form-check-label" for="inlineRadio1">5</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option6">
-                            <label class="form-check-label" for="inlineRadio2">6</label>
-                        </div>
-                        <div class="row ">
-                            <label for="inputDate" class="col-sm-4 col-form-label">Date and Time</label>
-                            <div class="col-sm-">
-                                <input type="date" class="form-control" id="inputDate" placeholder="Date">
-                            </div>
-                            <div class="col-sm-">
-                                <input type="time" class="form-control" id="inputTime" placeholder="Time">
-                            </div>
-                        </div>
-
-
-                        <a href="#" class="btn btn-primary">Reserve</a>
                     </div>
                 </div>
             </div>
@@ -233,10 +246,10 @@
 
 
 
-            <footer class="footer">
+            <footer class="footer col-12">
                 <div class="container">
                     <div class="row">
-                        <div class="col-4 offset-1 col-sm-2">
+                        <div class="col-12 offset-1 col-sm-2">
                             <h5>Links</h5>
                             <ul class="list-unstyled">
                                 <li><a href="#">Home</a></li>
@@ -248,13 +261,13 @@
                         <div class="col-7 col-sm-5">
                             <h5>Our Address</h5>
                             <address>
-		              121, Clear Water Bay Road<br>
-		              Clear Water Bay, Kowloon<br>
-		              HONG KONG<br>
-		              <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
-		              <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
-		              <i class="fa fa- fa-envelope lg"></i>: <a href="mailto:confusion@food.net">confusion@food.net</a>
-		           </address>
+                                121, Clear Water Bay Road<br>
+                                Clear Water Bay, Kowloon<br>
+                                HONG KONG<br>
+                                <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
+                                <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
+                                <i class="fa fa- fa-envelope lg"></i>: <a href="mailto:confusion@food.net">confusion@food.net</a>
+		                    </address>
                         </div>
                         <div class="col-12 col-sm-4 aling-self-center">
                             <div class="text-center">
@@ -274,15 +287,13 @@
                     </div>
                 </div>
             </footer>
+
+
             <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
             <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
             <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
             <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-            <script>
-                $(document).ready(function() {
-                    $('[data-toggle="tooltip"]').tooltip();
-                });
-            </script>
+
 
 </body>
 
